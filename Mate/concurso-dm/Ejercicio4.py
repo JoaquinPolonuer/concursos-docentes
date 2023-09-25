@@ -24,9 +24,10 @@ def euler_method(f, t0, x0, tF, h):
     while t < tF:
         x += h * f(t, x)
         t += h
+        
         t_values.append(t)
         x_values.append(x)
-
+        
     return t_values, x_values
     
 t_values_euler, x_values_euler = euler_method(f, 0, 1, 1, h=0.01)
